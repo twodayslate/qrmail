@@ -7,172 +7,164 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1131467617B08AB400E47789 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1131467517B08AB400E47789 /* UIKit.framework */; };
-		1131467817B08AB400E47789 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1131467717B08AB400E47789 /* Foundation.framework */; };
-		1131467A17B08AB400E47789 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1131467917B08AB400E47789 /* CoreGraphics.framework */; };
-		1131467C17B08AB400E47789 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1131467B17B08AB400E47789 /* CoreData.framework */; };
-		1131468217B08AB400E47789 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1131468017B08AB400E47789 /* InfoPlist.strings */; };
-		1131468417B08AB400E47789 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1131468317B08AB400E47789 /* main.m */; };
-		1131468817B08AB400E47789 /* mfcAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1131468717B08AB400E47789 /* mfcAppDelegate.mm */; };
-		1131468A17B08AB400E47789 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1131468917B08AB400E47789 /* Default.png */; };
-		1131468C17B08AB400E47789 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1131468B17B08AB400E47789 /* Default@2x.png */; };
-		1131468E17B08AB400E47789 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1131468D17B08AB400E47789 /* Default-568h@2x.png */; };
-		1131469117B08AB400E47789 /* MailForCouria.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1131468F17B08AB400E47789 /* MailForCouria.xcdatamodeld */; };
-		1131469917B08AB400E47789 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1131469817B08AB400E47789 /* SenTestingKit.framework */; };
-		1131469A17B08AB400E47789 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1131467517B08AB400E47789 /* UIKit.framework */; };
-		1131469B17B08AB400E47789 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1131467717B08AB400E47789 /* Foundation.framework */; };
-		1131469C17B08AB400E47789 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1131467B17B08AB400E47789 /* CoreData.framework */; };
-		113146A417B08AB400E47789 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 113146A217B08AB400E47789 /* InfoPlist.strings */; };
-		113146A717B08AB400E47789 /* MailForCouriaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 113146A617B08AB400E47789 /* MailForCouriaTests.m */; };
+		110B464D17B3498300929EB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110B464C17B3498300929EB6 /* Foundation.framework */; };
+		110B465D17B3498300929EB6 /* MailForCouria.mm in Sources */ = {isa = PBXBuildFile; fileRef = 110B465C17B3498300929EB6 /* MailForCouria.mm */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		1131469D17B08AB400E47789 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1131466A17B08AB400E47789 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1131467117B08AB400E47789;
-			remoteInfo = MailForCouria;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		1131467217B08AB400E47789 /* MailForCouria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MailForCouria.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1131467517B08AB400E47789 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		1131467717B08AB400E47789 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1131467917B08AB400E47789 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		1131467B17B08AB400E47789 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		1131467F17B08AB400E47789 /* MailForCouria-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MailForCouria-Info.plist"; sourceTree = "<group>"; };
-		1131468117B08AB400E47789 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1131468317B08AB400E47789 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1131468517B08AB400E47789 /* MailForCouria-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MailForCouria-Prefix.pch"; sourceTree = "<group>"; };
-		1131468617B08AB400E47789 /* mfcAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mfcAppDelegate.h; sourceTree = "<group>"; };
-		1131468717B08AB400E47789 /* mfcAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = mfcAppDelegate.mm; sourceTree = "<group>"; };
-		1131468917B08AB400E47789 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		1131468B17B08AB400E47789 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		1131468D17B08AB400E47789 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		1131469017B08AB400E47789 /* MailForCouria.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MailForCouria.xcdatamodel; sourceTree = "<group>"; };
-		1131469717B08AB400E47789 /* MailForCouriaTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MailForCouriaTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1131469817B08AB400E47789 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		113146A117B08AB400E47789 /* MailForCouriaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MailForCouriaTests-Info.plist"; sourceTree = "<group>"; };
-		113146A317B08AB400E47789 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		113146A517B08AB400E47789 /* MailForCouriaTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MailForCouriaTests.h; sourceTree = "<group>"; };
-		113146A617B08AB400E47789 /* MailForCouriaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MailForCouriaTests.m; sourceTree = "<group>"; };
-		113146B017B08B5D00E47789 /* Couria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Couria.h; path = ../Couria.h; sourceTree = "<group>"; };
+		110B464917B3498300929EB6 /* MailForCouria.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = MailForCouria.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		110B464C17B3498300929EB6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		110B465117B3498300929EB6 /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
+		110B465217B3498300929EB6 /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
+		110B465417B3498300929EB6 /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
+		110B465817B3498300929EB6 /* MailForCouria.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = MailForCouria.plist; path = Package/Library/PreferenceLoader/Preferences/MailForCouria.plist; sourceTree = "<group>"; };
+		110B465917B3498300929EB6 /* MailForCouriaIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MailForCouriaIcon.png; path = Package/Library/PreferenceLoader/Preferences/MailForCouriaIcon.png; sourceTree = "<group>"; };
+		110B465A17B3498300929EB6 /* MailForCouriaIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MailForCouriaIcon@2x.png"; path = "Package/Library/PreferenceLoader/Preferences/MailForCouriaIcon@2x.png"; sourceTree = "<group>"; };
+		110B465B17B3498300929EB6 /* MailForCouria-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MailForCouria-Prefix.pch"; sourceTree = "<group>"; };
+		110B465C17B3498300929EB6 /* MailForCouria.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MailForCouria.mm; sourceTree = "<group>"; };
+		110B466017B3498300929EB6 /* MailForCouria.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = MailForCouria.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/MailForCouria.plist; sourceTree = "<group>"; };
+		110B466617B349CC00929EB6 /* Couria.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Couria.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1131466F17B08AB400E47789 /* Frameworks */ = {
+		110B464517B3498300929EB6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1131467617B08AB400E47789 /* UIKit.framework in Frameworks */,
-				1131467817B08AB400E47789 /* Foundation.framework in Frameworks */,
-				1131467A17B08AB400E47789 /* CoreGraphics.framework in Frameworks */,
-				1131467C17B08AB400E47789 /* CoreData.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1131469317B08AB400E47789 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1131469917B08AB400E47789 /* SenTestingKit.framework in Frameworks */,
-				1131469A17B08AB400E47789 /* UIKit.framework in Frameworks */,
-				1131469B17B08AB400E47789 /* Foundation.framework in Frameworks */,
-				1131469C17B08AB400E47789 /* CoreData.framework in Frameworks */,
+				110B464D17B3498300929EB6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1131466917B08AB400E47789 = {
+		110B463F17B3498300929EB6 = {
 			isa = PBXGroup;
 			children = (
-				1131467D17B08AB400E47789 /* MailForCouria */,
-				1131469F17B08AB400E47789 /* MailForCouriaTests */,
-				1131467417B08AB400E47789 /* Frameworks */,
-				1131467317B08AB400E47789 /* Products */,
+				110B464E17B3498300929EB6 /* MailForCouria */,
+				110B464B17B3498300929EB6 /* Frameworks */,
+				110B464A17B3498300929EB6 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		1131467317B08AB400E47789 /* Products */ = {
+		110B464A17B3498300929EB6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1131467217B08AB400E47789 /* MailForCouria.app */,
-				1131469717B08AB400E47789 /* MailForCouriaTests.octest */,
+				110B464917B3498300929EB6 /* MailForCouria.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1131467417B08AB400E47789 /* Frameworks */ = {
+		110B464B17B3498300929EB6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1131467517B08AB400E47789 /* UIKit.framework */,
-				1131467717B08AB400E47789 /* Foundation.framework */,
-				1131467917B08AB400E47789 /* CoreGraphics.framework */,
-				1131467B17B08AB400E47789 /* CoreData.framework */,
-				1131469817B08AB400E47789 /* SenTestingKit.framework */,
+				110B464C17B3498300929EB6 /* Foundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1131467D17B08AB400E47789 /* MailForCouria */ = {
+		110B464E17B3498300929EB6 /* MailForCouria */ = {
 			isa = PBXGroup;
 			children = (
-				113146B017B08B5D00E47789 /* Couria.h */,
-				1131468617B08AB400E47789 /* mfcAppDelegate.h */,
-				1131468717B08AB400E47789 /* mfcAppDelegate.mm */,
-				1131468F17B08AB400E47789 /* MailForCouria.xcdatamodeld */,
-				1131467E17B08AB400E47789 /* Supporting Files */,
+				110B466617B349CC00929EB6 /* Couria.h */,
+				110B465C17B3498300929EB6 /* MailForCouria.mm */,
+				110B464F17B3498300929EB6 /* Package */,
+				110B465317B3498300929EB6 /* Supporting Files */,
 			);
 			path = MailForCouria;
 			sourceTree = "<group>";
 		};
-		1131467E17B08AB400E47789 /* Supporting Files */ = {
+		110B464F17B3498300929EB6 /* Package */ = {
 			isa = PBXGroup;
 			children = (
-				1131467F17B08AB400E47789 /* MailForCouria-Info.plist */,
-				1131468017B08AB400E47789 /* InfoPlist.strings */,
-				1131468317B08AB400E47789 /* main.m */,
-				1131468517B08AB400E47789 /* MailForCouria-Prefix.pch */,
-				1131468917B08AB400E47789 /* Default.png */,
-				1131468B17B08AB400E47789 /* Default@2x.png */,
-				1131468D17B08AB400E47789 /* Default-568h@2x.png */,
+				110B465017B3498300929EB6 /* DEBIAN */,
+				110B465517B3498300929EB6 /* Library */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+		110B465017B3498300929EB6 /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				110B465117B3498300929EB6 /* control.txt */,
+				110B465217B3498300929EB6 /* control */,
+			);
+			name = DEBIAN;
+			sourceTree = "<group>";
+		};
+		110B465317B3498300929EB6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				110B465417B3498300929EB6 /* PackageVersion.plist */,
+				110B465B17B3498300929EB6 /* MailForCouria-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1131469F17B08AB400E47789 /* MailForCouriaTests */ = {
+		110B465517B3498300929EB6 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				113146A517B08AB400E47789 /* MailForCouriaTests.h */,
-				113146A617B08AB400E47789 /* MailForCouriaTests.m */,
-				113146A017B08AB400E47789 /* Supporting Files */,
+				110B465617B3498300929EB6 /* PreferenceLoader */,
+				110B465E17B3498300929EB6 /* MobileSubstrate */,
 			);
-			path = MailForCouriaTests;
+			name = Library;
 			sourceTree = "<group>";
 		};
-		113146A017B08AB400E47789 /* Supporting Files */ = {
+		110B465617B3498300929EB6 /* PreferenceLoader */ = {
 			isa = PBXGroup;
 			children = (
-				113146A117B08AB400E47789 /* MailForCouriaTests-Info.plist */,
-				113146A217B08AB400E47789 /* InfoPlist.strings */,
+				110B465717B3498300929EB6 /* Preferences */,
 			);
-			name = "Supporting Files";
+			name = PreferenceLoader;
+			sourceTree = "<group>";
+		};
+		110B465717B3498300929EB6 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				110B465817B3498300929EB6 /* MailForCouria.plist */,
+				110B465917B3498300929EB6 /* MailForCouriaIcon.png */,
+				110B465A17B3498300929EB6 /* MailForCouriaIcon@2x.png */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		110B465E17B3498300929EB6 /* MobileSubstrate */ = {
+			isa = PBXGroup;
+			children = (
+				110B465F17B3498300929EB6 /* DynamicLibraries */,
+			);
+			name = MobileSubstrate;
+			sourceTree = "<group>";
+		};
+		110B465F17B3498300929EB6 /* DynamicLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				110B466017B3498300929EB6 /* MailForCouria.plist */,
+			);
+			name = DynamicLibraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		110B464617B3498300929EB6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		1131467117B08AB400E47789 /* MailForCouria */ = {
+		110B464817B3498300929EB6 /* MailForCouria */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 113146AA17B08AB400E47789 /* Build configuration list for PBXNativeTarget "MailForCouria" */;
+			buildConfigurationList = 110B466317B3498300929EB6 /* Build configuration list for PBXNativeTarget "MailForCouria" */;
 			buildPhases = (
-				1131466E17B08AB400E47789 /* Sources */,
-				1131466F17B08AB400E47789 /* Frameworks */,
-				1131467017B08AB400E47789 /* Resources */,
+				110B464417B3498300929EB6 /* Sources */,
+				110B464517B3498300929EB6 /* Frameworks */,
+				110B464617B3498300929EB6 /* Headers */,
+				110B464717B3498300929EB6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -180,80 +172,36 @@
 			);
 			name = MailForCouria;
 			productName = MailForCouria;
-			productReference = 1131467217B08AB400E47789 /* MailForCouria.app */;
-			productType = "com.apple.product-type.application";
-		};
-		1131469617B08AB400E47789 /* MailForCouriaTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 113146AD17B08AB400E47789 /* Build configuration list for PBXNativeTarget "MailForCouriaTests" */;
-			buildPhases = (
-				1131469217B08AB400E47789 /* Sources */,
-				1131469317B08AB400E47789 /* Frameworks */,
-				1131469417B08AB400E47789 /* Resources */,
-				1131469517B08AB400E47789 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1131469E17B08AB400E47789 /* PBXTargetDependency */,
-			);
-			name = MailForCouriaTests;
-			productName = MailForCouriaTests;
-			productReference = 1131469717B08AB400E47789 /* MailForCouriaTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 110B464917B3498300929EB6 /* MailForCouria.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1131466A17B08AB400E47789 /* Project object */ = {
+		110B464017B3498300929EB6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = mfc;
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = "Zachary Gorak";
 			};
-			buildConfigurationList = 1131466D17B08AB400E47789 /* Build configuration list for PBXProject "MailForCouria" */;
+			buildConfigurationList = 110B464317B3498300929EB6 /* Build configuration list for PBXProject "MailForCouria" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 1131466917B08AB400E47789;
-			productRefGroup = 1131467317B08AB400E47789 /* Products */;
+			mainGroup = 110B463F17B3498300929EB6;
+			productRefGroup = 110B464A17B3498300929EB6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1131467117B08AB400E47789 /* MailForCouria */,
-				1131469617B08AB400E47789 /* MailForCouriaTests */,
+				110B464817B3498300929EB6 /* MailForCouria */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		1131467017B08AB400E47789 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1131468217B08AB400E47789 /* InfoPlist.strings in Resources */,
-				1131468A17B08AB400E47789 /* Default.png in Resources */,
-				1131468C17B08AB400E47789 /* Default@2x.png in Resources */,
-				1131468E17B08AB400E47789 /* Default-568h@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1131469417B08AB400E47789 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				113146A417B08AB400E47789 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXShellScriptBuildPhase section */
-		1131469517B08AB400E47789 /* ShellScript */ = {
+		110B464717B3498300929EB6 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -264,73 +212,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1131466E17B08AB400E47789 /* Sources */ = {
+		110B464417B3498300929EB6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1131468417B08AB400E47789 /* main.m in Sources */,
-				1131468817B08AB400E47789 /* mfcAppDelegate.mm in Sources */,
-				1131469117B08AB400E47789 /* MailForCouria.xcdatamodeld in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1131469217B08AB400E47789 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				113146A717B08AB400E47789 /* MailForCouriaTests.m in Sources */,
+				110B465D17B3498300929EB6 /* MailForCouria.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		1131469E17B08AB400E47789 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1131467117B08AB400E47789 /* MailForCouria */;
-			targetProxy = 1131469D17B08AB400E47789 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		1131468017B08AB400E47789 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1131468117B08AB400E47789 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		113146A217B08AB400E47789 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				113146A317B08AB400E47789 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		113146A817B08AB400E47789 /* Debug */ = {
+		110B466117B3498300929EB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -339,140 +246,105 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+				iOSOpenDevPath = /opt/iOSOpenDev;
 			};
 			name = Debug;
 		};
-		113146A917B08AB400E47789 /* Release */ = {
+		110B466217B3498300929EB6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				iOSOpenDevPath = /opt/iOSOpenDev;
 			};
 			name = Release;
 		};
-		113146AB17B08AB400E47789 /* Debug */ = {
+		110B466417B3498300929EB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MailForCouria/MailForCouria-Prefix.pch";
-				INFOPLIST_FILE = "MailForCouria/MailForCouria-Info.plist";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
 			};
 			name = Debug;
 		};
-		113146AC17B08AB400E47789 /* Release */ = {
+		110B466517B3498300929EB6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MailForCouria/MailForCouria-Prefix.pch";
-				INFOPLIST_FILE = "MailForCouria/MailForCouria-Info.plist";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		113146AE17B08AB400E47789 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MailForCouria.app/MailForCouria";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MailForCouria/MailForCouria-Prefix.pch";
-				INFOPLIST_FILE = "MailForCouriaTests/MailForCouriaTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		113146AF17B08AB400E47789 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MailForCouria.app/MailForCouria";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MailForCouria/MailForCouria-Prefix.pch";
-				INFOPLIST_FILE = "MailForCouriaTests/MailForCouriaTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1131466D17B08AB400E47789 /* Build configuration list for PBXProject "MailForCouria" */ = {
+		110B464317B3498300929EB6 /* Build configuration list for PBXProject "MailForCouria" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				113146A817B08AB400E47789 /* Debug */,
-				113146A917B08AB400E47789 /* Release */,
+				110B466117B3498300929EB6 /* Debug */,
+				110B466217B3498300929EB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		113146AA17B08AB400E47789 /* Build configuration list for PBXNativeTarget "MailForCouria" */ = {
+		110B466317B3498300929EB6 /* Build configuration list for PBXNativeTarget "MailForCouria" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				113146AB17B08AB400E47789 /* Debug */,
-				113146AC17B08AB400E47789 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		113146AD17B08AB400E47789 /* Build configuration list for PBXNativeTarget "MailForCouriaTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				113146AE17B08AB400E47789 /* Debug */,
-				113146AF17B08AB400E47789 /* Release */,
+				110B466417B3498300929EB6 /* Debug */,
+				110B466517B3498300929EB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		1131468F17B08AB400E47789 /* MailForCouria.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				1131469017B08AB400E47789 /* MailForCouria.xcdatamodel */,
-			);
-			currentVersion = 1131469017B08AB400E47789 /* MailForCouria.xcdatamodel */;
-			path = MailForCouria.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = 1131466A17B08AB400E47789 /* Project object */;
+	rootObject = 110B464017B3498300929EB6 /* Project object */;
 }

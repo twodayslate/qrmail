@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-//#import <substrate.h>
+#import <substrate.h>
 #import <sys/sysctl.h>
-//#import "CaptainHook/CaptainHook.h"
+#import "CaptainHook/CaptainHook.h"
 #import "Couria.h"
 
 #define MailForCouriaIdentifier "zac.gorak.mailforcouria"
@@ -425,22 +425,22 @@ static CFDataRef messagePortCallback(CFMessagePortRef local, SInt32 messageId, C
 
 - (NSString *)getUserIdentifier:(BBBulletin *)bulletin
 {
-//    if (!appIsRunning()) {
-//        return nil;
-//    }
-//    NSString *notificationType = bulletin.context[@"notificationType"];
-//    NSDictionary *userInfo = bulletin.context[@"userInfo"];
-//    NSString *userIdentifier = nil;
-//    if ([notificationType isEqualToString:@"AppNotificationLocal"]) {
-//        userIdentifier = userInfo[@"jid"];
-//    } else if ([notificationType isEqualToString:@"AppNotificationRemote"]) {
-//        NSString *u = userInfo[@"aps"][@"u"];
-//        if ([u rangeOfString:@"-"].location == NSNotFound) {
-//            userIdentifier = [NSString stringWithFormat:@"%@@s.whatsapp.net", u];
-//        } else {
-//            userIdentifier = [NSString stringWithFormat:@"%@@g.us", u];
-//        }
-//    }
+    //    if (!appIsRunning()) {
+    //        return nil;
+    //    }
+    //    NSString *notificationType = bulletin.context[@"notificationType"];
+    //    NSDictionary *userInfo = bulletin.context[@"userInfo"];
+    //    NSString *userIdentifier = nil;
+    //    if ([notificationType isEqualToString:@"AppNotificationLocal"]) {
+    //        userIdentifier = userInfo[@"jid"];
+    //    } else if ([notificationType isEqualToString:@"AppNotificationRemote"]) {
+    //        NSString *u = userInfo[@"aps"][@"u"];
+    //        if ([u rangeOfString:@"-"].location == NSNotFound) {
+    //            userIdentifier = [NSString stringWithFormat:@"%@@s.whatsapp.net", u];
+    //        } else {
+    //            userIdentifier = [NSString stringWithFormat:@"%@@g.us", u];
+    //        }
+    //    }
     
     NSString *userIdentifier = nil;
     return userIdentifier;
@@ -448,13 +448,13 @@ static CFDataRef messagePortCallback(CFMessagePortRef local, SInt32 messageId, C
 
 - (NSString *)getNickname:(NSString *)userIdentifier
 {
-//    if (!appIsRunning()) {
-//        return nil;
-//    }
-//    CFDataRef data = (__bridge CFDataRef)[userIdentifier dataUsingEncoding:NSUTF8StringEncoding];
-//    CFDataRef returnData = NULL;
-//    CFMessagePortSendRequest(remotePort(), GetNickname, data, 30, 30, kCFRunLoopDefaultMode, &returnData);
-//    NSString *nickname = [[NSString alloc]initWithData:(__bridge NSData *)returnData encoding:NSUTF8StringEncoding]
+    //    if (!appIsRunning()) {
+    //        return nil;
+    //    }
+    //    CFDataRef data = (__bridge CFDataRef)[userIdentifier dataUsingEncoding:NSUTF8StringEncoding];
+    //    CFDataRef returnData = NULL;
+    //    CFMessagePortSendRequest(remotePort(), GetNickname, data, 30, 30, kCFRunLoopDefaultMode, &returnData);
+    //    NSString *nickname = [[NSString alloc]initWithData:(__bridge NSData *)returnData encoding:NSUTF8StringEncoding]
     
     NSString *nickname = nil;
     return nickname;
@@ -462,13 +462,13 @@ static CFDataRef messagePortCallback(CFMessagePortRef local, SInt32 messageId, C
 
 - (UIImage *)getAvatar:(NSString *)userIdentifier
 {
-//    if (!appIsRunning()) {
-//        return nil;
-//    }
-//    CFDataRef data = (__bridge CFDataRef)[userIdentifier dataUsingEncoding:NSUTF8StringEncoding];
-//    CFDataRef returnData = NULL;
-//    CFMessagePortSendRequest(remotePort(), GetAvatar, data, 30, 30, kCFRunLoopDefaultMode, &returnData);
-//    UIImage *avatar = [UIImage imageWithData:(__bridge NSData *)returnData];
+    //    if (!appIsRunning()) {
+    //        return nil;
+    //    }
+    //    CFDataRef data = (__bridge CFDataRef)[userIdentifier dataUsingEncoding:NSUTF8StringEncoding];
+    //    CFDataRef returnData = NULL;
+    //    CFMessagePortSendRequest(remotePort(), GetAvatar, data, 30, 30, kCFRunLoopDefaultMode, &returnData);
+    //    UIImage *avatar = [UIImage imageWithData:(__bridge NSData *)returnData];
     
     UIImage *avatar = nil;
     return avatar;
@@ -476,28 +476,28 @@ static CFDataRef messagePortCallback(CFMessagePortRef local, SInt32 messageId, C
 
 - (NSArray *)getMessages:(NSString *)userIdentifier
 {
-//    if (!appIsRunning()) {
-//        return nil;
-//    }
-//    CFDataRef data = (__bridge CFDataRef)[userIdentifier dataUsingEncoding:NSUTF8StringEncoding];
-//    CFDataRef returnData = NULL;
-//    CFMessagePortSendRequest(remotePort(), GetMessages, data, 30, 30, kCFRunLoopDefaultMode, &returnData);
-//    NSArray *messages = [NSKeyedUnarchiver unarchiveObjectWithData:(__bridge NSData *)returnData];
-//    
+    //    if (!appIsRunning()) {
+    //        return nil;
+    //    }
+    //    CFDataRef data = (__bridge CFDataRef)[userIdentifier dataUsingEncoding:NSUTF8StringEncoding];
+    //    CFDataRef returnData = NULL;
+    //    CFMessagePortSendRequest(remotePort(), GetMessages, data, 30, 30, kCFRunLoopDefaultMode, &returnData);
+    //    NSArray *messages = [NSKeyedUnarchiver unarchiveObjectWithData:(__bridge NSData *)returnData];
+    //
     NSArray *messages = nil;
     return messages;
 }
 
 - (NSArray *)getContacts:(NSString *)keyword
 {
-//    if (!appIsRunning()) {
-//        return nil;
-//    }
-//    CFDataRef data = (__bridge CFDataRef)[keyword dataUsingEncoding:NSUTF8StringEncoding];
-//    CFDataRef returnData = NULL;
-//    CFMessagePortSendRequest(remotePort(), GetContacts, data, 30, 30, kCFRunLoopDefaultMode, &returnData);
-//    NSArray *contacts = [NSKeyedUnarchiver unarchiveObjectWithData:(__bridge NSData *)returnData];
-//    
+    //    if (!appIsRunning()) {
+    //        return nil;
+    //    }
+    //    CFDataRef data = (__bridge CFDataRef)[keyword dataUsingEncoding:NSUTF8StringEncoding];
+    //    CFDataRef returnData = NULL;
+    //    CFMessagePortSendRequest(remotePort(), GetContacts, data, 30, 30, kCFRunLoopDefaultMode, &returnData);
+    //    NSArray *contacts = [NSKeyedUnarchiver unarchiveObjectWithData:(__bridge NSData *)returnData];
+    //
     NSArray *contacts = nil;
     return contacts;
 }
@@ -508,24 +508,24 @@ static CFDataRef messagePortCallback(CFMessagePortRef local, SInt32 messageId, C
 
 - (void)sendMessage:(id<CouriaMessage>)message toUser:(NSString *)userIdentifier
 {
-//    if (!appIsRunning()) {
-//        return;
-//    }
-//    CouriaWhatsAppMessage *whatsappMessage = [[CouriaWhatsAppMessage alloc]init];
-//    whatsappMessage.text = message.text;
-//    whatsappMessage.media = message.media;
-//    whatsappMessage.outgoing = message.outgoing;
-//    CFDataRef data = (__bridge CFDataRef)[NSKeyedArchiver archivedDataWithRootObject:@{UserIDKey: userIdentifier, MessageKey: whatsappMessage}];
-//    CFMessagePortSendRequest(remotePort(), SendMessage, data, 30, 30, NULL, NULL);
+    //    if (!appIsRunning()) {
+    //        return;
+    //    }
+    //    CouriaWhatsAppMessage *whatsappMessage = [[CouriaWhatsAppMessage alloc]init];
+    //    whatsappMessage.text = message.text;
+    //    whatsappMessage.media = message.media;
+    //    whatsappMessage.outgoing = message.outgoing;
+    //    CFDataRef data = (__bridge CFDataRef)[NSKeyedArchiver archivedDataWithRootObject:@{UserIDKey: userIdentifier, MessageKey: whatsappMessage}];
+    //    CFMessagePortSendRequest(remotePort(), SendMessage, data, 30, 30, NULL, NULL);
 }
 
 - (void)markRead:(NSString *)userIdentifier
 {
-//    if (!appIsRunning()) {
-//        return;
-//    }
-//    CFDataRef data = (__bridge CFDataRef)[userIdentifier dataUsingEncoding:NSUTF8StringEncoding];
-//    CFMessagePortSendRequest(remotePort(), MarkRead, data, 30, 30, NULL, NULL);
+    //    if (!appIsRunning()) {
+    //        return;
+    //    }
+    //    CFDataRef data = (__bridge CFDataRef)[userIdentifier dataUsingEncoding:NSUTF8StringEncoding];
+    //    CFMessagePortSendRequest(remotePort(), MarkRead, data, 30, 30, NULL, NULL);
 }
 
 - (BOOL)canSendPhoto
