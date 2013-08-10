@@ -2,7 +2,7 @@
 
 [Couria](https://github.com/Qusic/WhatsAppForCouria)
 
-[iPhone Headers](https://github.com/rpetrich/iphoneheaders)
+[iPhone Headers](https://github.com/hbang/headers) [Older iPhone Headers](https://github.com/rpetrich/iphoneheaders)
 
 
 ## Implementation
