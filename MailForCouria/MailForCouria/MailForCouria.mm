@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MessageUI/MessageUI.h>
 #import <substrate.h>
 #import <sys/sysctl.h>
 #import "CaptainHook/CaptainHook.h"
@@ -424,7 +425,7 @@ static CFDataRef messagePortCallback(CFMessagePortRef local, SInt32 messageId, C
 @implementation CouriaWhatsAppDataSource
 
 - (NSString *)getUserIdentifier:(BBBulletin *)bulletin
-{
+{ //email address
     //    if (!appIsRunning()) {
     //        return nil;
     //    }
@@ -442,12 +443,31 @@ static CFDataRef messagePortCallback(CFMessagePortRef local, SInt32 messageId, C
     //        }
     //    }
     
-    NSString *userIdentifier = nil;
-    return userIdentifier;
+    NSDictionary *userInfo = bulletin.context[@"userInfo"];
+    if (![userInfo[@"e"] isEqualToString:@"m"]) { // Not a mention notification.
+        return nil;
+    }
+    if ([getTwitterAccountByUserID([userInfo[@"a"]stringValue]).username caseInsensitiveCompare:Username] != NSOrderedSame) { // Not a notification from the designated account.
+        return nil;
+    }
+    
+    //Extract infomation from the bulletin. But this method is NOT recommended. You should directly read data from databases of the app, or simply ask the app by the way of interprocess communication.
+    NSString *alert = userInfo[@"aps"][@"alert"];
+    NSUInteger location = [alert rangeOfString:@":"].location;
+    if (location == NSNotFound) { // What?
+        return nil;
+    }
+    NSString *part1 = [alert substringToIndex:location];
+    NSString *part2 = [alert substringFromIndex:location+2];
+    NSString *username = [part1 substringWithRange:[[NSRegularExpression regularExpressionWithPattern:@"(?<=@).*?(?= )" options:NSRegularExpressionCaseInsensitive error:nil]firstMatchInString:part1 options:0 range:NSMakeRange(0, part1.length)].range];
+    NSString *message = part2;
+    Messages[username] = message; // Store this message summary in the push notification.
+    
+    return username;
 }
 
 - (NSString *)getNickname:(NSString *)userIdentifier
-{
+{ //Contact name
     //    if (!appIsRunning()) {
     //        return nil;
     //    }
@@ -461,7 +481,7 @@ static CFDataRef messagePortCallback(CFMessagePortRef local, SInt32 messageId, C
 }
 
 - (UIImage *)getAvatar:(NSString *)userIdentifier
-{
+{ //if contact has a picture... else return default image
     //    if (!appIsRunning()) {
     //        return nil;
     //    }
@@ -475,7 +495,7 @@ static CFDataRef messagePortCallback(CFMessagePortRef local, SInt32 messageId, C
 }
 
 - (NSArray *)getMessages:(NSString *)userIdentifier
-{
+{ //subject: /n email text
     //    if (!appIsRunning()) {
     //        return nil;
     //    }
@@ -506,6 +526,33 @@ static CFDataRef messagePortCallback(CFMessagePortRef local, SInt32 messageId, C
 
 @implementation CouriaWhatsAppDelegate
 
+- (void)sendEmail:(NSArray *)emails:(OutgoingMessage *)message:(NSString *)subject
+{
+    [_textView resignFirstResponder];
+    [_progressHUD showInView:[self view]];
+    
+    MessageWriter *messageWriter = [[MessageWriter alloc] init];
+    MutableMessageHeaders *headers = [[MutableMessageHeaders alloc] init];
+    
+    UIDevice *device = [UIDevice currentDevice];
+    
+    //NSString *subject = [NSString stringWithFormat:@"Volt Bug Report (%@, %@, %@, %@, %@)", [self version], [self buildNumber], [self buildDate], [device model], [device systemVersion]];
+    [headers setHeader:subject forKey:@"subject"];
+    [headers setAddressListForTo:[NSArray arrayWithObjects:email, nil]];
+    [headers setAddressListForSender:[NSArray arrayWithObjects:email, nil]];
+    
+    //OutgoingMessage *message = [messageWriter createMessageWithString:[_textView text] headers:headers];
+    MFMailDelivery *messageDelivery = [MFMailDelivery newWithMessage:message];
+    
+    [messageDelivery setDelegate:self];
+    [messageDelivery deliverAsynchronously];
+    
+    [messageWriter release];
+    [headers release];
+    [message release];
+    [messageDelivery release];
+}
+
 - (void)sendMessage:(id<CouriaMessage>)message toUser:(NSString *)userIdentifier
 {
     //    if (!appIsRunning()) {
@@ -517,6 +564,8 @@ static CFDataRef messagePortCallback(CFMessagePortRef local, SInt32 messageId, C
     //    whatsappMessage.outgoing = message.outgoing;
     //    CFDataRef data = (__bridge CFDataRef)[NSKeyedArchiver archivedDataWithRootObject:@{UserIDKey: userIdentifier, MessageKey: whatsappMessage}];
     //    CFMessagePortSendRequest(remotePort(), SendMessage, data, 30, 30, NULL, NULL);
+    OutgoingMessage *message = [messageWriter createMessageWithString:message.text headers:headers];
+    [CouriaWhatsAppDelegate sendEmail:[NSarray arraywithObjects:userIdentifier]:message:message.text]
 }
 
 - (void)markRead:(NSString *)userIdentifier
