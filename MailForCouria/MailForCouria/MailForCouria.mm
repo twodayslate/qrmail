@@ -443,31 +443,39 @@ static CFDataRef messagePortCallback(CFMessagePortRef local, SInt32 messageId, C
     //        }
     //    }
     
-    NSDictionary *userInfo = bulletin.context[@"userInfo"];
-    if (![userInfo[@"e"] isEqualToString:@"m"]) { // Not a mention notification.
-        return nil;
-    }
-    if ([getTwitterAccountByUserID([userInfo[@"a"]stringValue]).username caseInsensitiveCompare:Username] != NSOrderedSame) { // Not a notification from the designated account.
-        return nil;
-    }
+//    NSDictionary *userInfo = bulletin.context[@"userInfo"];
+//    if (![userInfo[@"e"] isEqualToString:@"m"]) { // Not a mention notification.
+//        return nil;
+//    }
+//    if ([getTwitterAccountByUserID([userInfo[@"a"]stringValue]).username caseInsensitiveCompare:Username] != NSOrderedSame) { // Not a notification from the designated account.
+//        return nil;
+//    }
+//    
+//    //Extract infomation from the bulletin. But this method is NOT recommended. You should directly read data from databases of the app, or simply ask the app by the way of interprocess communication.
+//    NSString *alert = userInfo[@"aps"][@"alert"];
+//    NSUInteger location = [alert rangeOfString:@":"].location;
+//    if (location == NSNotFound) { // What?
+//        return nil;
+//    }
+//    NSString *part1 = [alert substringToIndex:location];
+//    NSString *part2 = [alert substringFromIndex:location+2];
+//    NSString *username = [part1 substringWithRange:[[NSRegularExpression regularExpressionWithPattern:@"(?<=@).*?(?= )" options:NSRegularExpressionCaseInsensitive error:nil]firstMatchInString:part1 options:0 range:NSMakeRange(0, part1.length)].range];
+//    NSString *message = part2;
+//    Messages[username] = message; // Store this message summary in the push notification.
+//    
+//    return username;
     
-    //Extract infomation from the bulletin. But this method is NOT recommended. You should directly read data from databases of the app, or simply ask the app by the way of interprocess communication.
-    NSString *alert = userInfo[@"aps"][@"alert"];
-    NSUInteger location = [alert rangeOfString:@":"].location;
-    if (location == NSNotFound) { // What?
-        return nil;
-    }
-    NSString *part1 = [alert substringToIndex:location];
-    NSString *part2 = [alert substringFromIndex:location+2];
-    NSString *username = [part1 substringWithRange:[[NSRegularExpression regularExpressionWithPattern:@"(?<=@).*?(?= )" options:NSRegularExpressionCaseInsensitive error:nil]firstMatchInString:part1 options:0 range:NSMakeRange(0, part1.length)].range];
-    NSString *message = part2;
-    Messages[username] = message; // Store this message summary in the push notification.
+    // How much useful information does the bulletin actually provide?
+    // Hint: David Ashman says not much
+    // Use MSNotificationObserver
+    NSLog(bulletin.description);
+    NSLog(bulletin.context.description);
     
-    return username;
+    return nil;
 }
 
 - (NSString *)getNickname:(NSString *)userIdentifier
-{ //Contact name
+{ 
     //    if (!appIsRunning()) {
     //        return nil;
     //    }
@@ -476,12 +484,20 @@ static CFDataRef messagePortCallback(CFMessagePortRef local, SInt32 messageId, C
     //    CFMessagePortSendRequest(remotePort(), GetNickname, data, 30, 30, kCFRunLoopDefaultMode, &returnData);
     //    NSString *nickname = [[NSString alloc]initWithData:(__bridge NSData *)returnData encoding:NSUTF8StringEncoding]
     
+    // Look in regular address book for contact
+    // If have nickname, use that
+    // else use first name
+    
+    // If not in regular address book, look in recent contacts
+    // /private/var/mobile/library/addressbook -> ABRecent table
+    
+    
     NSString *nickname = nil;
     return nickname;
 }
 
 - (UIImage *)getAvatar:(NSString *)userIdentifier
-{ //if contact has a picture... else return default image
+{
     //    if (!appIsRunning()) {
     //        return nil;
     //    }
@@ -489,6 +505,8 @@ static CFDataRef messagePortCallback(CFMessagePortRef local, SInt32 messageId, C
     //    CFDataRef returnData = NULL;
     //    CFMessagePortSendRequest(remotePort(), GetAvatar, data, 30, 30, kCFRunLoopDefaultMode, &returnData);
     //    UIImage *avatar = [UIImage imageWithData:(__bridge NSData *)returnData];
+    
+    // Look in address book, if no picture present display default contact picture
     
     UIImage *avatar = nil;
     return avatar;
@@ -504,8 +522,15 @@ static CFDataRef messagePortCallback(CFMessagePortRef local, SInt32 messageId, C
     //    CFMessagePortSendRequest(remotePort(), GetMessages, data, 30, 30, kCFRunLoopDefaultMode, &returnData);
     //    NSArray *messages = [NSKeyedUnarchiver unarchiveObjectWithData:(__bridge NSData *)returnData];
     //
+    
+    // Could possibly get all the information from the actual bulletin
     NSArray *messages = nil;
     return messages;
+}
+
+- (NSString *)getSubject
+{
+    return nil;
 }
 
 - (NSArray *)getContacts:(NSString *)keyword
@@ -517,7 +542,10 @@ static CFDataRef messagePortCallback(CFMessagePortRef local, SInt32 messageId, C
     //    CFDataRef returnData = NULL;
     //    CFMessagePortSendRequest(remotePort(), GetContacts, data, 30, 30, kCFRunLoopDefaultMode, &returnData);
     //    NSArray *contacts = [NSKeyedUnarchiver unarchiveObjectWithData:(__bridge NSData *)returnData];
-    //
+    
+    
+    // Return addresses in address book which contain email address
+    // Return recent contacts in /private/var/mobile/library/addressbook -> ABRecent table
     NSArray *contacts = nil;
     return contacts;
 }
@@ -526,46 +554,33 @@ static CFDataRef messagePortCallback(CFMessagePortRef local, SInt32 messageId, C
 
 @implementation CouriaWhatsAppDelegate
 
-- (void)sendEmail:(NSArray *)emails:(OutgoingMessage *)message:(NSString *)subject
+- (void)sendMessage:(id<CouriaMessage>)message toUser:(NSString *)userIdentifier
 {
-    [_textView resignFirstResponder];
-    [_progressHUD showInView:[self view]];
-    
+
+    // Create the messageWriter
     MessageWriter *messageWriter = [[MessageWriter alloc] init];
+    // Set headers
     MutableMessageHeaders *headers = [[MutableMessageHeaders alloc] init];
-    
-    UIDevice *device = [UIDevice currentDevice];
-    
-    //NSString *subject = [NSString stringWithFormat:@"Volt Bug Report (%@, %@, %@, %@, %@)", [self version], [self buildNumber], [self buildDate], [device model], [device systemVersion]];
     [headers setHeader:subject forKey:@"subject"];
     [headers setAddressListForTo:[NSArray arrayWithObjects:email, nil]];
     [headers setAddressListForSender:[NSArray arrayWithObjects:email, nil]];
+    // Setup message
+    OutgoingMessage *message = [messageWriter createMessageWithString:message.text headers:headers];
     
-    //OutgoingMessage *message = [messageWriter createMessageWithString:[_textView text] headers:headers];
+    [_textView resignFirstResponder];
+    [_progressHUD showInView:[self view]];
+    
     MFMailDelivery *messageDelivery = [MFMailDelivery newWithMessage:message];
     
+    // Send message
     [messageDelivery setDelegate:self];
     [messageDelivery deliverAsynchronously];
     
+    // Cleanup
     [messageWriter release];
     [headers release];
     [message release];
     [messageDelivery release];
-}
-
-- (void)sendMessage:(id<CouriaMessage>)message toUser:(NSString *)userIdentifier
-{
-    //    if (!appIsRunning()) {
-    //        return;
-    //    }
-    //    CouriaWhatsAppMessage *whatsappMessage = [[CouriaWhatsAppMessage alloc]init];
-    //    whatsappMessage.text = message.text;
-    //    whatsappMessage.media = message.media;
-    //    whatsappMessage.outgoing = message.outgoing;
-    //    CFDataRef data = (__bridge CFDataRef)[NSKeyedArchiver archivedDataWithRootObject:@{UserIDKey: userIdentifier, MessageKey: whatsappMessage}];
-    //    CFMessagePortSendRequest(remotePort(), SendMessage, data, 30, 30, NULL, NULL);
-    OutgoingMessage *message = [messageWriter createMessageWithString:message.text headers:headers];
-    [CouriaWhatsAppDelegate sendEmail:[NSarray arraywithObjects:userIdentifier]:message:message.text]
 }
 
 - (void)markRead:(NSString *)userIdentifier
