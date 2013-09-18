@@ -33,3 +33,4 @@ are all in: MessageUI/MailComposeController.h
 [Accessing the addressbook](http://zcentric.com/2008/09/19/access-the-address-book/)
 [Recent contacts](http://forums.macrumors.com/showthread.php?t=835559)
 [Mobile Substrate Tutorial](http://xsellize.com/topic/197822-ms-mobile-substrate-advanced-tutorial/)
+http://www.cydiasubstrate.com/
