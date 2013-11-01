@@ -14,6 +14,8 @@ Options:
 
 ###sendMessage function
 
+    Given by cykey
+    
     -(void)send:(id)send;
     -(void)sendMessage;
     -(BOOL)deliverMessage;
@@ -34,3 +36,9 @@ are all in: MessageUI/MailComposeController.h
 [Recent contacts](http://forums.macrumors.com/showthread.php?t=835559)
 [Mobile Substrate Tutorial](http://xsellize.com/topic/197822-ms-mobile-substrate-advanced-tutorial/)
 http://www.cydiasubstrate.com/
+
+
+Useful links: 
+http://iphonedevwiki.net/index.php/Message.framework  
+https://developer.apple.com/library/ios/DOCUMENTATION/AddressBook/Reference/AddressBook_iPhoneOS_Framework/AddressBook_iPhoneOS_Framework.pdf  
+http://iphonedevwiki.net/index.php/MailAccount  
