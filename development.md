@@ -42,3 +42,6 @@ Useful links:
 http://iphonedevwiki.net/index.php/Message.framework  
 https://developer.apple.com/library/ios/DOCUMENTATION/AddressBook/Reference/AddressBook_iPhoneOS_Framework/AddressBook_iPhoneOS_Framework.pdf  
 http://iphonedevwiki.net/index.php/MailAccount  
+
+
+http://duymym.blogspot.com/2013/09/how-to-compile-your-ios-code-in.html
