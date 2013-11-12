@@ -1,0 +1,23 @@
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>apple</key>
+    <true/>
+    <key>appleaccount</key>
+    <true/>
+    <key>com.apple.mobilemail.smime</key>
+    <true/>
+    <key>com.apple.identities</key>
+    <true/>
+    <key>com.apple.certificates</key>
+    <true/>
+	<key>keychain-access-groups</key>
+	    <array>
+	        <string>apple</string>
+			<string>appleaccount</string>
+			<string>com.apple.mobilemail.smime</string>
+			<string>com.apple.identities</string>
+			<string>com.apple.ceterificates</string>
+	    </array>
+  </dict>
+</plist>
