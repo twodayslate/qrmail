@@ -45,3 +45,7 @@ http://iphonedevwiki.net/index.php/MailAccount
 
 
 http://duymym.blogspot.com/2013/09/how-to-compile-your-ios-code-in.html
+
+https://ghostbin.com/paste/qu2zq
+
+https://ghostbin.com/paste/v6npe
