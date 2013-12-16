@@ -1,0 +1,10 @@
+Package: com.yourcompany.bulletininfo
+Name: bulletinInfo
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: Zac Gorak
+Author: Zac Gorak
+Section: Tweaks
+Version: 0.0.1-73
+Installed-Size: 20
