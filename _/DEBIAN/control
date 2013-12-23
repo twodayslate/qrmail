@@ -1,0 +1,10 @@
+Package: com.yourcompany.qrmail
+Name: qrmail
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: Zac Gorak
+Author: Zac Gorak
+Section: Tweaks
+Version: 0.0.1-8
+Installed-Size: 20
