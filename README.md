@@ -1,8 +1,9 @@
 MailForCouria
 =============
 
-Quick Compose/Reply for mail.app using Couria
+Quick Reply for mail.app
 
-Future updates will support gmail.app
-
-This tweak will be relesaed for free on Cydia upon completion
+Known bugs:
+Popup waits for mail to send before showing
+Double popups
+Mail takes a while to send
