@@ -1,4 +1,4 @@
-MailForCouria
+[MailForCouria](http://apt.thebigboss.org/onepackage.php?bundleid=com.twodayslate.qrmail)
 =============
 
 Quick Reply for mail.app
