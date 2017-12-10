@@ -1,9 +1,9 @@
 ## Important Links
 
-[Couria](https://github.com/Qusic/WhatsAppForCouria)
-
-[iPhone Headers](https://github.com/hbang/headers) [Older iPhone Headers](https://github.com/rpetrich/iphoneheaders)
-[More headers](https://github.com/nst/iOS-Runtime-Headers/tree/master/PrivateFrameworks/Message.framework)
+* [Couria](https://github.com/Qusic/WhatsAppForCouria)
+* [iPhone Headers](https://github.com/hbang/headers) 
+* [Older iPhone Headers](https://github.com/rpetrich/iphoneheaders)
+* [More headers](https://github.com/nst/iOS-Runtime-Headers/tree/master/PrivateFrameworks/Message.framework)
 
 ## Implementation
 
